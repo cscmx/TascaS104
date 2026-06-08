@@ -1,18 +1,21 @@
 <?php
+/*
+Crea una classe que representi un empleat, amb atributs referits al seu nom i sou. Defineix un mètode que rebi com a paràmetres el nom i el sou. Planteja un segon mètode que imprimeixi el nom i un missatge que mostri si ha de pagar o no impostos (si el sou en supera 6000, paga impostos).
+*/
 
 class Empleado 
 {
-    //se declara el constructor directamente
-    public function __construct(
-        private string $name,
-        private int $salary
-    ) {}
+    public string $name;
+    public int $salary;
+    
+    public function __construct(string $name, int $salary){
+        $this->name = $name;
+        $this->salary = $salary;
+    }
 
-    //métodos para obtener las propiedades (getter & setter)
     public function getName(){
         return $this->name;
     }
-
     public function getSalary(){
         return $this->salary;
     }
@@ -20,7 +23,6 @@ class Empleado
     public function setName(string $name){
         $this->name = $name;
     }
-
     public function setSalary(int $salary){
         $this->salary = $salary;
     }
@@ -28,7 +30,6 @@ class Empleado
     //métodos propios
 
     public function payTaxes() {
-        
         echo $this->name;
         if ($this->salary > 6000){
             echo " tiene que pagar impuestos";
@@ -38,7 +39,7 @@ class Empleado
     }
 }
 
-$empleado = new Empleado("Pedro", 5000);
+$empleado = new Empleado("Pedro", 45000);
 
 $empleado->payTaxes();
 
