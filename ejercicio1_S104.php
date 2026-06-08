@@ -31,15 +31,13 @@ class Empleado
 
     public function payTaxes() {
         echo $this->name;
-        if ($this->salary > 6000){
-            echo " tiene que pagar impuestos";
-        } else {
-            echo " no tiene que pagar impuestos";
-        }
+        
+        echo ($this->salary > 6000) ? " tiene que pagar impuestos" : " no tiene que pagar impuestos";
+
     }
 }
 
-$empleado = new Empleado("Pedro", 45000);
+$empleado = new Empleado("Pedro", 4000);
 
 $empleado->payTaxes();
 
