@@ -11,14 +11,12 @@ class Shape
         $this->alto = $alto;
         $this->ancho = $ancho;
     }
-
     public function getAlto (){
         return $this->alto;
     }
     public function getAncho (){
         return $this->ancho;
     }
-
     public function setAlto(int $alto){
         $this->alto = $alto;
     }
@@ -26,38 +24,24 @@ class Shape
         $this->ancho = $ancho;
     }
 
-
 }
 
 class Triangle extends Shape 
 {
-
-
-    public function __construct(int $alto, int $ancho)
-    {
-        parent::__construct($alto, $ancho);
-    }
-
     public function calcularArea(){
-        return ($this->alto + $this->ancho)/2;
+        return ($this->alto * $this->ancho)/2;
     }
-
 }
 
  class Rectangle extends Shape 
  {
-    public function __construc(int $alto, int $ancho){
-        parent::__construct($alto, $ancho);
-    }
-
     public function calcularArea() {
         return $this->alto * $this->ancho;
     }
-    
  }
 
+ 
  $myTriangle = new Triangle(10,5);
-
  $myRectangle = new Rectangle (5, 8);
 
  echo "Area triangulo: ".$myTriangle->calcularArea().PHP_EOL;
