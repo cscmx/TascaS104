@@ -41,8 +41,11 @@ class Triangle extends Shape
  }
 
  
+ 
  $myTriangle = new Triangle(10,5);
  $myRectangle = new Rectangle (5, 8);
 
  echo "Area triangulo: ".$myTriangle->calcularArea().PHP_EOL;
  echo "Area rectángulo: ".$myRectangle->calcularArea().PHP_EOL;
+
+ ?>
