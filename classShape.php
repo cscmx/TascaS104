@@ -2,24 +2,24 @@
 
 class Shape 
 {
-    public int $alto;
-    public int $ancho;
+    protected int $height;
+    protected int $width;
 
-    public function __construct(int $alto, int $ancho){
-        $this->alto = $alto;
-        $this->ancho = $ancho;
+    public function __construct(int $height, int $width){
+        $this->height = $height;
+        $this->width = $width;
     }
-    public function getAlto (){
-        return $this->alto;
+    public function getAlto(): float {
+        return $this->height;
     }
-    public function getAncho (){
-        return $this->ancho;
+    public function getAncho(): float {
+        return $this->width;
     }
-    public function setAlto(int $alto){
-        $this->alto = $alto;
+    public function setAlto(int $height): void {
+        $this->height = $height;
     }
-    public function setAncho(int $ancho){
-        $this->ancho = $ancho;
+    public function setAncho(int $width): void {
+        $this->width = $width;
     }
 
 }
